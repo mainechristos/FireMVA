@@ -45,7 +45,7 @@ void Train_Fakes_TT( TString myMethodList = "" )
 
    TMVA::DataLoader* dl = new TMVA::DataLoader("dl");
 
-   dl->AddVariable("TagMuonPt");
+   //dl->AddVariable("TagMuonPt");
    dl->AddVariable("TagMuonAbsEta");
    dl->AddVariable("TagMuonDXY");
    dl->AddVariable("TagMuonDZ");
