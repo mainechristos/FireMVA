@@ -46,7 +46,7 @@ void Application_Fakes_TT(){
 	reader->AddVariable("TagMuonPOGPFPUIsoR04 := TagMuonPOGPFPUIsoR04", &TagMuonPOGPFPUIsoR04);
 
 
-	reader->BookMVA( "BDTG method",  "/cms/mchristos/ANN/FireMVA/dl/weights/fire_MVA_TT_noMuonPt_BDT.weights.xml");
+	reader->BookMVA( "BDTG method",  "dl/weights/fire_MVA_TT_noMuonPt_BDT.weights.xml");
 
 	TFile *input(0);   
    	input = TFile::Open("/cms/mchristos/ANN/FireMVA/TT_FakeMuonTree_Analysis.root");
