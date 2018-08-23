@@ -37,7 +37,7 @@ void Train_Fakes_TT( TString myMethodList = "" )
       }
    }
 
-   TString outfileName( "class_perf/fire_MVA_3params.root" );
+   TString outfileName( "class_perf/fire_MVA_TT_noMuonPt.root" );
    TFile* outputFile = TFile::Open( outfileName, "RECREATE" );
 
    TMVA::Factory *factory = new TMVA::Factory( "fire_MVA_TT_noMuonPt", outputFile,
@@ -150,7 +150,7 @@ void Train_Fakes_TT( TString myMethodList = "" )
    dl->AddSignalTree ( nonfakes, 1);
 
    dl->PrepareTrainingAndTestTree( "1", "1",
-                                        "nTrain_Signal=78208:nTrain_Background=45821:SplitMode=Random:NormMode=NumEvents:!V" );
+                                        "nTrain_Signal=0:nTrain_Background=0:SplitMode=Random:NormMode=NumEvents:!V" );
    
    //factory->BookMethod( dl, TMVA::Types::kBDT, "50 Trees","!H:!V:NTrees=50:MinNodeSize=2.5%:BoostType=Grad:Shrinkage=1:nCuts=20:MaxDepth=3" );
    //factory->BookMethod( dl, TMVA::Types::kBDT, "150 Trees","!H:!V:NTrees=150:MinNodeSize=2.5%:BoostType=Grad:Shrinkage=1:nCuts=20:MaxDepth=3" );
@@ -197,6 +197,8 @@ void Train_Fakes_TT( TString myMethodList = "" )
    //factory->BookMethod( dl, TMVA::Types::kBDT, "Decorrelation","!H:!V:NTrees=450:MinNodeSize=1.0%:BoostType=Grad:Shrinkage=1:nCuts=100:MaxDepth=6::VarTransform=D" );
    //factory->BookMethod( dl, TMVA::Types::kBDT, "Gaussian","!H:!V:NTrees=450:MinNodeSize=1.0%:BoostType=Grad:Shrinkage=1:nCuts=100:MaxDepth=6::VarTransform=G" );
    
+
+   //factory->BookMethod( dl, TMVA::Types::kBDT, "BDT","!H:!V:NTrees=50:MinNodeSize=1.0%:BoostType=Grad:Shrinkage=1:nCuts=100:MaxDepth=3::VarTransform=I" );
 
    factory->BookMethod( dl, TMVA::Types::kBDT, "BDT","!H:!V:NTrees=150:MinNodeSize=7.5%:BoostType=Grad:Shrinkage=1:nCuts=20:MaxDepth=2::VarTransform=G" );
 
