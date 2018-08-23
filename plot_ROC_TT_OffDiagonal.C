@@ -106,7 +106,7 @@ void plot_ROC_TT_OffDiagonal(){
    }
 
    TGraph *g_iso = new TGraph(nbins_iso,nonfakesPoints_iso,fakesPoints_iso);
-   TGraph *g_iso10  = new TGraph(1,sigeff10,bgrej10);
+   TGraph *g_iso15  = new TGraph(1,sigeff10,bgrej10);
 
    g_iso->SetMarkerStyle(20);
    g_iso->SetMarkerSize(1);
@@ -115,9 +115,9 @@ void plot_ROC_TT_OffDiagonal(){
    g_iso->SetLineColor(kBlue);
    g_iso->Draw("ALP");
 
-   g_iso10->SetMarkerStyle(29);
-   g_iso10->SetMarkerSize(2);
-   g_iso10->SetMarkerColor(kBlack);
+   g_iso15->SetMarkerStyle(29);
+   g_iso15->SetMarkerSize(2);
+   g_iso15->SetMarkerColor(kBlack);
 
    g_iso->GetXaxis()->SetTitle("Signal Efficiency");
    g_iso->GetYaxis()->SetTitle("Background Rejection");
@@ -270,7 +270,7 @@ void plot_ROC_TT_OffDiagonal(){
    mg->Add(g_iso);
    mg->Add(g_bdt1);
    mg->Add(g_bdt2);
-   mg->Add(g_iso10);
+   mg->Add(g_iso15);
    mg->Draw("ALP");
    mg->SetTitle("Fire MVA Vs Isolation");
    mg->GetXaxis()->SetTitle("Signal Efficiency");
@@ -279,7 +279,7 @@ void plot_ROC_TT_OffDiagonal(){
    TLegend *legendmg=new TLegend(0.5,0.5,.9,.9);
    //legend->SetHeader("Training Inputs"); // option "C" allows to center the header
    legendmg->AddEntry(g_iso,"TagMuonPOGRelPFIsoDBCorrR04");
-   legendmg->AddEntry(g_iso10,"TagMuonPOGRelPFIsoDBCorrR04 == .15");
+   legendmg->AddEntry(g_iso15,"TagMuonPOGRelPFIsoDBCorrR04 == .15");
    legendmg->AddEntry(g_bdt2,"Optimized BDT (no MuonPt) - Trained on DY");
    legendmg->AddEntry(g_bdt1,"Optimized BDT (no MuonPt) - Trained on TTbar");
    

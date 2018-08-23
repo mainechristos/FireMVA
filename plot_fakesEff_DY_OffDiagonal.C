@@ -1,22 +1,23 @@
-void plot_ROC_DY_OffDiagonal(){
+void plot_fakesEff_DY_OffDiagonal(){
   
   float lumi = 1.;
   gStyle->SetOptStat(0);
+
 
   //Bg weights and cuts
   TString WeightExpression ="";
   WeightExpression += "1";
 
-
+  
   //store total number of fake events and nonfake events    
   double fake_events_iso = 0.0;
   double nonfake_events_iso = 0.0;
 
 
-  /////////////////////////////
-  // isolation graphs        //
-  /////////////////////////////
 
+  /////////////////////////////
+  // Isolation graphs       //
+  /////////////////////////////
 
   //Get skimmed TTrees (copied from /cms/multilepton-2/hsaka/Workspace/pyPlotter-2018Maxi/pyPlotter/FIREMVA/)
   TFile *fake_input_iso = TFile::Open( "/cms/mchristos/ANN/FireMVA/DY_FakeMuonTree.root" ); 
@@ -24,47 +25,44 @@ void plot_ROC_DY_OffDiagonal(){
 
   TFile *nonfake_input_iso = TFile::Open( "/cms/mchristos/ANN/FireMVA/DY_NonFakeMuonTree.root" ); 
   std::cout << "--- Using nonfakes input file: " << nonfake_input_iso->GetName() <<         std::endl;
-
+  
   TTree *fake_iso = (TTree*)fake_input_iso->Get("rootTupleTreeVeryLoose/tree");
   TTree *nonfake_iso = (TTree*)nonfake_input_iso->Get("rootTupleTreeVeryLoose/tree");
-
+  
   //Histos to store isolation 
   TH1D *fake_iso_histo= new TH1D("fake_iso_histo","fake_iso_histo",40,0,1);
   TH1D *nonfake_iso_histo= new TH1D("nonfake_iso_histo","nonfake_iso_histo",40,0,1);
-
+  
   fake_iso->Draw("(TagMuonPOGRelPFIsoDBCorrR04)>>fake_iso_histo",WeightExpression);
   nonfake_iso->Draw("(TagMuonPOGRelPFIsoDBCorrR04)>>nonfake_iso_histo",WeightExpression);
-
+  
   //default lumi set to 1 for skimmed files
   fake_events_iso += fake_iso_histo->Integral()*lumi;
   fake_iso_histo->Scale(lumi);
 
   nonfake_events_iso += nonfake_iso_histo->Integral()*lumi;
   nonfake_iso_histo->Scale(lumi);
-  
+
+     
+
 
   cout<<"fake Events: "<<fake_events_iso<<endl;
   cout<<"nonfake Events: "<<nonfake_events_iso<<endl;
 
-  //Draw Isolation histograms for fakes and non-fakes 
+
+  //Draw Isolation histograms for fakes and non-fakes
   TCanvas *cst = new TCanvas("cst","cst",10,100,700,700);
 
-  gPad->SetLogy();
-  //gPad->SetGrid();
-
-  nonfake_iso_histo->Draw("HIST");
-  nonfake_iso_histo->SetLineWidth(2);
-  nonfake_iso_histo->SetLineColor(kBlue);
-  
-  fake_iso_histo->Draw("SAME HIST");
+  fake_iso_histo->Draw("HIST");
   fake_iso_histo->SetLineWidth(2);
   fake_iso_histo->SetMarkerStyle(1);
   fake_iso_histo->SetLineColor(kRed);
 
-  
+  nonfake_iso_histo->Draw("SAME HIST");
+  nonfake_iso_histo->SetLineWidth(2);
+  nonfake_iso_histo->SetLineColor(kBlue);
 
-
-  nonfake_iso_histo->GetXaxis()->SetTitle("Isolation");
+  fake_iso_histo->GetXaxis()->SetTitle("Isolation");
 
   cst->Update();
 
@@ -73,7 +71,8 @@ void plot_ROC_DY_OffDiagonal(){
   legend->AddEntry(nonfake_iso_histo,("NonFakes - Integral: "+std::to_string(nonfake_iso_histo->Integral())).c_str());
   legend->Draw();
 
-  cst->SaveAs("DY_fakes_OffDiagonal.png");
+  cst->SaveAs("DY_fakes_OD.png");
+
 
   ////////////////////////////
   // Isolation ROC Curve   ///
@@ -89,41 +88,50 @@ void plot_ROC_DY_OffDiagonal(){
   Double_t sigeff10[1], bgrej10[1];
 
 
-   for ( int i = 0; i <= nbins_iso; ++i ) {
+  for ( int i = 0; i < nbins_iso; ++i ) {
 
     float sig_frac = nonfake_iso_histo->Integral(0,i);
     float back_frac = fake_iso_histo->Integral(0,i);
 
     nonfakesPoints_iso[i] = sig_frac/nonfake_events_iso;
-    fakesPoints_iso[i] = 1-back_frac/fake_events_iso;
+    fakesPoints_iso[i] = back_frac/fake_events_iso;
 
     //store point if iso=.15
     if(i==nbins_iso*.15){
+
       sigeff10[0] = sig_frac/nonfake_events_iso;
-      bgrej10[0] = 1-back_frac/fake_events_iso; 
+      bgrej10[0] = back_frac/fake_events_iso; 
+      cout<<"Bg Eff: "<<back_frac/fake_events_iso<<endl;
+      cout<<"Sig Eff: "<<sig_frac/nonfake_events_iso;
+
+
     }
+    cout<<"Sig Eff: "<<sig_frac/nonfake_events_iso<<endl;
+    cout<<"Bg Eff: "<<back_frac/fake_events_iso<<endl;
+    cout<<endl;
+  }
+  
 
-   }
+  //TGraph for Iso ROC curve
+  TGraph *g_iso = new TGraph(nbins_iso,nonfakesPoints_iso,fakesPoints_iso);
+  TGraph *g_iso15  = new TGraph(1,sigeff10,bgrej10);
 
-   TGraph *g_iso = new TGraph(nbins_iso,nonfakesPoints_iso,fakesPoints_iso);
-   TGraph *g_iso15  = new TGraph(1,sigeff10,bgrej10);
+  g_iso->SetMarkerStyle(20);
+  g_iso->SetMarkerSize(1);
+  g_iso->SetMarkerColor(kBlue);
+  g_iso->SetLineWidth(2);
+  g_iso->SetLineColor(kBlue);
+  g_iso->Draw("ALP");
 
-   g_iso->SetMarkerStyle(20);
-   g_iso->SetMarkerSize(1);
-   g_iso->SetMarkerColor(kBlue);
-   g_iso->SetLineWidth(2);
-   g_iso->SetLineColor(kBlue);
-   g_iso->Draw("ALP");
+  g_iso15->SetMarkerStyle(29);
+  g_iso15->SetMarkerSize(2);
+  g_iso15->SetMarkerColor(kBlack);
 
-   g_iso15->SetMarkerStyle(29);
-   g_iso15->SetMarkerSize(2);
-   g_iso15->SetMarkerColor(kBlack);
-
-   g_iso->GetXaxis()->SetTitle("Signal Efficiency");
-   g_iso->GetYaxis()->SetTitle("Background Rejection");
+  g_iso->GetXaxis()->SetTitle("Signal Efficiency");
+  g_iso->GetYaxis()->SetTitle("Background Rejection");
 
   /////////////////////////////
-  // BDT ROC curves          //
+  //    BDT ROC curves       //
   /////////////////////////////
 
   float fake_events_bdt1 = 0.0;
@@ -154,11 +162,13 @@ void plot_ROC_DY_OffDiagonal(){
   nonfake_events_bdt1 += nonfake_bdt1_histo->Integral()*lumi;
   nonfake_bdt1_histo->Scale(lumi);
 
-  cout<<"fake Events: "<<fake_events_bdt1<<endl;
-  cout<<"nonfake Events: "<<nonfake_events_bdt1<<endl;
+         
+  cout<<"fake Events (BDT normalized): "<<fake_events_bdt1<<endl;
+  cout<<"nonfake Events (BDT normalized): "<<nonfake_events_bdt1<<endl;
+
 
   ////////////////////////////
-  //    ROC Curves         ///
+  //   BDT ROC Curves      ///
   ////////////////////////////
 
   int nbins_bdt1 = nonfake_bdt1_histo->GetNbinsX();
@@ -166,14 +176,17 @@ void plot_ROC_DY_OffDiagonal(){
   Double_t nonfakesPoints_bdt1[nbins_bdt1], fakesPoints_bdt1[nbins_bdt1];
 
   //goes from left to right (opposite signal bg symmetry as isolation var)
-  for ( int i = 0; i <= nbins_bdt1; ++i ) {
+  for ( int i = 0; i < nbins_bdt1; ++i ) {
 
     float sig_frac = nonfake_bdt1_histo->Integral(nbins_bdt1-i,nbins_bdt1);
     float back_frac = fake_bdt1_histo->Integral(nbins_bdt1-i,nbins_bdt1);
     nonfakesPoints_bdt1[i] = sig_frac/nonfake_events_bdt1;
-    fakesPoints_bdt1[i] = 1-back_frac/fake_events_bdt1;
-    //cout<<"Sig_frac: "<<sig_frac<<endl;
-    //cout<<"Sig_tot: "<<nonfake_events_bdt1<<endl;
+    fakesPoints_bdt1[i] = back_frac/fake_events_bdt1;
+    float bdtval= -1+(2.0*(nbins_bdt1-i-1))/nbins_bdt1;
+    cout<<"BDT value: "<<bdtval<<endl;
+    cout<<"Sig Eff: "<<sig_frac/nonfake_events_bdt1<<endl;
+    cout<<"Bg Eff: "<<back_frac/fake_events_bdt1<<endl;
+    cout<<endl;
   }
 
    TGraph *g_bdt1 = new TGraph(nbins_bdt1,nonfakesPoints_bdt1,fakesPoints_bdt1);
@@ -219,48 +232,47 @@ void plot_ROC_DY_OffDiagonal(){
   cout<<"fake Events: "<<fake_events_bdt2<<endl;
   cout<<"nonfake Events: "<<nonfake_events_bdt2<<endl;
 
-
   ////////////////////////////
-  // Global BDT ROC Curve  ///
+  // Global BDT ROC Curves ///
   ////////////////////////////
 
   int nbins_bdt2 = nonfake_bdt2_histo->GetNbinsX();
 
-  //Iso fakes Efficiency.
   Double_t nonfakesPoints_bdt2[nbins_bdt2], fakesPoints_bdt2[nbins_bdt2];
-  //stores point tagged for .95 nonfakes efficiency
 
-
-   for ( int i = 0; i <= nbins_bdt2; ++i ) {
+  //goes from left to right (opposite signal bg symmetry as isolation var)
+  for ( int i = 0; i < nbins_bdt2; ++i ) {
 
     float sig_frac = nonfake_bdt2_histo->Integral(nbins_bdt2-i,nbins_bdt2);
     float back_frac = fake_bdt2_histo->Integral(nbins_bdt2-i,nbins_bdt2);
-
     nonfakesPoints_bdt2[i] = sig_frac/nonfake_events_bdt2;
-    fakesPoints_bdt2[i] = 1-back_frac/fake_events_bdt2;
+    fakesPoints_bdt2[i] = back_frac/fake_events_bdt2;
+    float bdtval= -1+(2.0*(nbins_bdt2-i-1))/nbins_bdt2;
+    cout<<"bdt2 value: "<<bdtval<<endl;
+    cout<<"Sig Eff: "<<sig_frac/nonfake_events_bdt2<<endl;
+    cout<<"Bg Eff: "<<back_frac/fake_events_bdt2<<endl;
+    cout<<endl;
+  }
 
-
-   }
-
-   TGraph *g_bdt2 = new TGraph(nbins_bdt2,nonfakesPoints_bdt2,fakesPoints_bdt2);
+  TGraph *g_bdt2 = new TGraph(nbins_bdt2,nonfakesPoints_bdt2,fakesPoints_bdt2);
 
    g_bdt2->SetMarkerStyle(20);
    g_bdt2->SetMarkerSize(1);
    g_bdt2->SetMarkerColor(kGreen);
    g_bdt2->SetLineWidth(2);
    g_bdt2->SetLineColor(kGreen);
-   g_bdt2->Draw("ALP");
-
+   g_iso->Draw("ALP");
+   g_bdt2->Draw("ALP SAME");
+   g_bdt2->Draw("ALP SAME");
 
    g_bdt2->GetXaxis()->SetTitle("Signal Efficiency");
    g_bdt2->GetYaxis()->SetTitle("Background Rejection");
-   roc->SaveAs("ROC.png");
+
 
   //Draw
    g_iso->Draw("ALP");
-   g_bdt2->Draw("ALP SAME");
    g_bdt1->Draw("ALP SAME");
-
+   g_bdt2->Draw("ALP SAME");
 
    g_bdt1->GetXaxis()->SetTitle("Signal Efficiency");
    g_bdt1->GetYaxis()->SetTitle("Background Rejection");
@@ -275,19 +287,18 @@ void plot_ROC_DY_OffDiagonal(){
    mg->Draw("ALP");
    mg->SetTitle("Fire MVA Vs Isolation");
    mg->GetXaxis()->SetTitle("Signal Efficiency");
-   mg->GetYaxis()->SetTitle("Background Rejection");
+   mg->GetYaxis()->SetTitle("Background Efficiency");
 
    TLegend *legendmg=new TLegend(0.5,0.5,.9,.9);
    //legend->SetHeader("Training Inputs"); // option "C" allows to center the header
    legendmg->AddEntry(g_iso,"TagMuonPOGRelPFIsoDBCorrR04");
    legendmg->AddEntry(g_iso15,"TagMuonPOGRelPFIsoDBCorrR04 == .15");
-   legendmg->AddEntry(g_bdt2,"Optimized BDT (no MuonPt) - Trained on TTbar");
+   legendmg->AddEntry(g_bdt2,"Optimized BDT (no MuonPt) - Trained on TT");
    legendmg->AddEntry(g_bdt1,"Optimized BDT (noMuonPt) - Trained on DY");
-   
    legendmg->SetBorderSize(0);
    legendmg->Draw();
 
-   roc->SaveAs("ROC_DY_OffDiagonal.png");
+   roc->SaveAs("fakesEff_DY_OffDiagonal.png");
 
 
 }
