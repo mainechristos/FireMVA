@@ -22,10 +22,11 @@ void Application_Fakes_DY(){
 
 	TMVA::Reader *reader = new TMVA::Reader( "!Color:!Silent" ); 
 
-	float TagMuonAbsEta, TagMuonDXY, TagMuonDZ, TagMuonSIP3D, TagMuonPtRatio, TagMuonPtRel, TagMuonJetLRM, TagMuonJetFD, TagMuonJetInOutRatio;
+	float TagMuonAbsEta, TagMuonPt, TagMuonDXY, TagMuonDZ, TagMuonSIP3D, TagMuonPtRatio, TagMuonPtRel, TagMuonJetLRM, TagMuonJetFD, TagMuonJetInOutRatio;
 	float TagMuonJetZest, TagMuonJetNoOfConst, TagMuonJetCSV, TagMuonPOGRelPFIsoDBCorrR04,TagMuonRelTrkIsoR03, TagMuonPOGPFChargedHadronIsoR04;
 	float TagMuonPOGPFNeutralHadronIsoR04, TagMuonPOGPFPhotonIsoR04, TagMuonPOGPFPUIsoR04;
 
+	//reader->AddVariable("TagMuonPt := TagMuonPt", &TagMuonPt);
 	reader->AddVariable("TagMuonAbsEta := TagMuonAbsEta", &TagMuonAbsEta);
 	reader->AddVariable("TagMuonDXY := TagMuonDXY", &TagMuonDXY);
 	reader->AddVariable("TagMuonDZ := TagMuonDZ", &TagMuonDZ);
@@ -57,6 +58,7 @@ void Application_Fakes_DY(){
    	TTree *tree = (TTree*)input->Get("rootTupleTreeVeryLoose/tree");
    	TTreeReader myReader(tree);
 
+   	TTreeReaderValue<float> inTagMuonPt(myReader, "TagMuonPt");
    	TTreeReaderValue<float> inTagMuonAbsEta(myReader, "TagMuonAbsEta");
    	TTreeReaderValue<float> inTagMuonDXY(myReader, "TagMuonDXY");
    	TTreeReaderValue<float> inTagMuonDZ(myReader, "TagMuonDZ");
@@ -100,6 +102,7 @@ void Application_Fakes_DY(){
 
 	   	tree->GetEntry(count);
 
+	   	TagMuonPt = *inTagMuonPt;
 	   	TagMuonAbsEta = *inTagMuonAbsEta;
 	   	TagMuonDXY = *inTagMuonDXY;
 	   	TagMuonDZ = *inTagMuonDZ;
