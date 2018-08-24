@@ -200,7 +200,7 @@ void Train_Fakes_TT( TString myMethodList = "" )
 
    //factory->BookMethod( dl, TMVA::Types::kBDT, "BDT","!H:!V:NTrees=50:MinNodeSize=1.0%:BoostType=Grad:Shrinkage=1:nCuts=100:MaxDepth=3::VarTransform=I" );
 
-   factory->BookMethod( dl, TMVA::Types::kBDT, "BDT","!H:!V:NTrees=150:MinNodeSize=7.5%:BoostType=Grad:Shrinkage=1:nCuts=20:MaxDepth=2::VarTransform=G" );
+   factory->BookMethod( dl, TMVA::Types::kBDT, "BDT","!H:!V:NTrees=150:MinNodeSize=7.5%:BoostType=Grad:Shrinkage=1:nCuts=20:MaxDepth=3::VarTransform=G" );
 
 
    factory->TrainAllMethods();
