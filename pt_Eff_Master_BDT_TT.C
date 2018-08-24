@@ -52,16 +52,16 @@ void pt_Eff_Master_BDT_TT( TString myMethodList = "" )
    
    
    TH1D *fakes_bdt1_histo= new TH1D("fakes_bdt1_histo","fakes_bdt1_histo",20,0,100);
-   TH1D *fakes_bdt1_histo_ptcut= new TH1D("fakes_bdt1_histo_ptcut","fakes_bdt1_histo_ptcut",20,0,100);
+   TH1D *fakes_bdt1_histo_cut= new TH1D("fakes_bdt1_histo_cut","fakes_bdt1_histo_cut",20,0,100);
 
    TH1D *nonfakes_bdt1_histo= new TH1D("nonfakes_bdt1_histo","nonfakes_bdt1_histo",20,0,100);
-   TH1D *nonfakes_bdt1_histo_ptcut= new TH1D("nonfakes_bdt1_histo_ptcut","nonfakes_bdt1_histo_ptcut",20,0,100);
+   TH1D *nonfakes_bdt1_histo_cut= new TH1D("nonfakes_bdt1_histo_cut","nonfakes_bdt1_histo_cut",20,0,100);
    
    fakes_bdt1->Draw("(TagMuonPt)>>fakes_bdt1_histo");
    nonfakes_bdt1->Draw("(TagMuonPt)>>nonfakes_bdt1_histo");
 
-   fakes_bdt1->Draw("(TagMuonPt)>>fakes_bdt1_histo_ptcut",bdt1_WeightExpression);
-   nonfakes_bdt1->Draw("(TagMuonPt)>>nonfakes_bdt1_histo_ptcut",bdt1_WeightExpression);
+   fakes_bdt1->Draw("(TagMuonPt)>>fakes_bdt1_histo_cut",bdt1_WeightExpression);
+   nonfakes_bdt1->Draw("(TagMuonPt)>>nonfakes_bdt1_histo_cut",bdt1_WeightExpression);
    
 
    fake_events += fakes_bdt1_histo->Integral()*lumi;
@@ -74,8 +74,8 @@ void pt_Eff_Master_BDT_TT( TString myMethodList = "" )
    cout<<"Cutting on BDT1"<<endl;
    cout<<"fake Events (total): "<<fake_events<<endl;
    cout<<"nonfake Events (total): "<<nonfake_events<<endl;
-   cout<<"fake Events (after Pt cut): "<<fakes_bdt1_histo_ptcut->Integral()*lumi<<endl;
-   cout<<"nonfake Events (after Pt cut): "<<nonfakes_bdt1_histo_ptcut->Integral()*lumi<<endl;
+   cout<<"fake Events (after cut): "<<fakes_bdt1_histo_cut->Integral()*lumi<<endl;
+   cout<<"nonfake Events (after cut): "<<nonfakes_bdt1_histo_cut->Integral()*lumi<<endl;
    
 
    ///////////////////////////
@@ -93,16 +93,16 @@ void pt_Eff_Master_BDT_TT( TString myMethodList = "" )
    
    
    TH1D *fakes_bdt2_histo= new TH1D("fakes_bdt2_histo","fakes_bdt2_histo",20,0,100);
-   TH1D *fakes_bdt2_histo_ptcut= new TH1D("fakes_bdt2_histo_ptcut","fakes_bdt2_histo_ptcut",20,0,100);
+   TH1D *fakes_bdt2_histo_cut= new TH1D("fakes_bdt2_histo_cut","fakes_bdt2_histo_cut",20,0,100);
 
    TH1D *nonfakes_bdt2_histo= new TH1D("nonfakes_bdt2_histo","nonfakes_bdt2_histo",20,0,100);
-   TH1D *nonfakes_bdt2_histo_ptcut= new TH1D("nonfakes_bdt2_histo_ptcut","nonfakes_bdt2_histo_ptcut",20,0,100);
+   TH1D *nonfakes_bdt2_histo_cut= new TH1D("nonfakes_bdt2_histo_cut","nonfakes_bdt2_histo_cut",20,0,100);
    
    fakes_bdt2->Draw("(TagMuonPt)>>fakes_bdt2_histo");
    nonfakes_bdt2->Draw("(TagMuonPt)>>nonfakes_bdt2_histo");
 
-   fakes_bdt2->Draw("(TagMuonPt)>>fakes_bdt2_histo_ptcut",bdt2_WeightExpression);
-   nonfakes_bdt2->Draw("(TagMuonPt)>>nonfakes_bdt2_histo_ptcut",bdt2_WeightExpression);
+   fakes_bdt2->Draw("(TagMuonPt)>>fakes_bdt2_histo_cut",bdt2_WeightExpression);
+   nonfakes_bdt2->Draw("(TagMuonPt)>>nonfakes_bdt2_histo_cut",bdt2_WeightExpression);
    fake_events=0;
    fake_events += fakes_bdt2_histo->Integral()*lumi;
    fakes_bdt2_histo->Scale(lumi);
@@ -115,8 +115,8 @@ void pt_Eff_Master_BDT_TT( TString myMethodList = "" )
    cout<<"Cutting on BDT2"<<endl;
    cout<<"fake Events (total): "<<fake_events<<endl;
    cout<<"nonfake Events (total): "<<nonfake_events<<endl;
-   cout<<"fake Events (after Pt cut): "<<fakes_bdt2_histo_ptcut->Integral()*lumi<<endl;
-   cout<<"nonfake Events (after Pt cut): "<<nonfakes_bdt2_histo_ptcut->Integral()*lumi<<endl;
+   cout<<"fake Events (after cut): "<<fakes_bdt2_histo_cut->Integral()*lumi<<endl;
+   cout<<"nonfake Events (after cut): "<<nonfakes_bdt2_histo_cut->Integral()*lumi<<endl;
 
    ///////////////////////////
    //    Adding BDT 3       //
@@ -133,16 +133,16 @@ void pt_Eff_Master_BDT_TT( TString myMethodList = "" )
    
    
    TH1D *fakes_bdt3_histo= new TH1D("fakes_bdt3_histo","fakes_bdt3_histo",20,0,100);
-   TH1D *fakes_bdt3_histo_ptcut= new TH1D("fakes_bdt3_histo_ptcut","fakes_bdt3_histo_ptcut",20,0,100);
+   TH1D *fakes_bdt3_histo_cut= new TH1D("fakes_bdt3_histo_cut","fakes_bdt3_histo_cut",20,0,100);
 
    TH1D *nonfakes_bdt3_histo= new TH1D("nonfakes_bdt3_histo","nonfakes_bdt3_histo",20,0,100);
-   TH1D *nonfakes_bdt3_histo_ptcut= new TH1D("nonfakes_bdt3_histo_ptcut","nonfakes_bdt3_histo_ptcut",20,0,100);
+   TH1D *nonfakes_bdt3_histo_cut= new TH1D("nonfakes_bdt3_histo_cut","nonfakes_bdt3_histo_cut",20,0,100);
    
    fakes_bdt3->Draw("(TagMuonPt)>>fakes_bdt3_histo");
    nonfakes_bdt3->Draw("(TagMuonPt)>>nonfakes_bdt3_histo");
 
-   fakes_bdt3->Draw("(TagMuonPt)>>fakes_bdt3_histo_ptcut",bdt3_WeightExpression);
-   nonfakes_bdt3->Draw("(TagMuonPt)>>nonfakes_bdt3_histo_ptcut",bdt3_WeightExpression);
+   fakes_bdt3->Draw("(TagMuonPt)>>fakes_bdt3_histo_cut",bdt3_WeightExpression);
+   nonfakes_bdt3->Draw("(TagMuonPt)>>nonfakes_bdt3_histo_cut",bdt3_WeightExpression);
    
    fake_events=0;
    fake_events += fakes_bdt3_histo->Integral()*lumi;
@@ -155,8 +155,8 @@ void pt_Eff_Master_BDT_TT( TString myMethodList = "" )
    cout<<"Cutting on BDT3"<<endl;
    cout<<"fake Events (total): "<<fake_events<<endl;
    cout<<"nonfake Events (total): "<<nonfake_events<<endl;
-   cout<<"fake Events (after Pt cut): "<<fakes_bdt3_histo_ptcut->Integral()*lumi<<endl;
-   cout<<"nonfake Events (after Pt cut): "<<nonfakes_bdt3_histo_ptcut->Integral()*lumi<<endl;
+   cout<<"fake Events (after cut): "<<fakes_bdt3_histo_cut->Integral()*lumi<<endl;
+   cout<<"nonfake Events (after cut): "<<nonfakes_bdt3_histo_cut->Integral()*lumi<<endl;
 
    ///////////////////////////
    //    Adding BDT 4       //
@@ -173,16 +173,16 @@ void pt_Eff_Master_BDT_TT( TString myMethodList = "" )
    
    
    TH1D *fakes_bdt4_histo= new TH1D("fakes_bdt4_histo","fakes_bdt4_histo",20,0,100);
-   TH1D *fakes_bdt4_histo_ptcut= new TH1D("fakes_bdt4_histo_ptcut","fakes_bdt4_histo_ptcut",20,0,100);
+   TH1D *fakes_bdt4_histo_cut= new TH1D("fakes_bdt4_histo_cut","fakes_bdt4_histo_cut",20,0,100);
 
    TH1D *nonfakes_bdt4_histo= new TH1D("nonfakes_bdt4_histo","nonfakes_bdt4_histo",20,0,100);
-   TH1D *nonfakes_bdt4_histo_ptcut= new TH1D("nonfakes_bdt4_histo_ptcut","nonfakes_bdt4_histo_ptcut",20,0,100);
+   TH1D *nonfakes_bdt4_histo_cut= new TH1D("nonfakes_bdt4_histo_cut","nonfakes_bdt4_histo_cut",20,0,100);
    
    fakes_bdt4->Draw("(TagMuonPt)>>fakes_bdt4_histo");
    nonfakes_bdt4->Draw("(TagMuonPt)>>nonfakes_bdt4_histo");
 
-   fakes_bdt4->Draw("(TagMuonPt)>>fakes_bdt4_histo_ptcut",bdt4_WeightExpression);
-   nonfakes_bdt4->Draw("(TagMuonPt)>>nonfakes_bdt4_histo_ptcut",bdt4_WeightExpression);
+   fakes_bdt4->Draw("(TagMuonPt)>>fakes_bdt4_histo_cut",bdt4_WeightExpression);
+   nonfakes_bdt4->Draw("(TagMuonPt)>>nonfakes_bdt4_histo_cut",bdt4_WeightExpression);
    
    fake_events=0;
    fake_events += fakes_bdt4_histo->Integral()*lumi;
@@ -195,8 +195,8 @@ void pt_Eff_Master_BDT_TT( TString myMethodList = "" )
    cout<<"Cutting on BDT4"<<endl;
    cout<<"fake Events (total): "<<fake_events<<endl;
    cout<<"nonfake Events (total): "<<nonfake_events<<endl;
-   cout<<"fake Events (after Pt cut): "<<fakes_bdt4_histo_ptcut->Integral()*lumi<<endl;
-   cout<<"nonfake Events (after Pt cut): "<<nonfakes_bdt4_histo_ptcut->Integral()*lumi<<endl;
+   cout<<"fake Events (after cut): "<<fakes_bdt4_histo_cut->Integral()*lumi<<endl;
+   cout<<"nonfake Events (after cut): "<<nonfakes_bdt4_histo_cut->Integral()*lumi<<endl;
 
    ///////////////////////////
    //    Adding BDT 5       //
@@ -213,16 +213,16 @@ void pt_Eff_Master_BDT_TT( TString myMethodList = "" )
    
    
    TH1D *fakes_bdt5_histo= new TH1D("fakes_bdt5_histo","fakes_bdt5_histo",20,0,100);
-   TH1D *fakes_bdt5_histo_ptcut= new TH1D("fakes_bdt5_histo_ptcut","fakes_bdt5_histo_ptcut",20,0,100);
+   TH1D *fakes_bdt5_histo_cut= new TH1D("fakes_bdt5_histo_cut","fakes_bdt5_histo_cut",20,0,100);
 
    TH1D *nonfakes_bdt5_histo= new TH1D("nonfakes_bdt5_histo","nonfakes_bdt5_histo",20,0,100);
-   TH1D *nonfakes_bdt5_histo_ptcut= new TH1D("nonfakes_bdt5_histo_ptcut","nonfakes_bdt5_histo_ptcut",20,0,100);
+   TH1D *nonfakes_bdt5_histo_cut= new TH1D("nonfakes_bdt5_histo_cut","nonfakes_bdt5_histo_cut",20,0,100);
    
    fakes_bdt5->Draw("(TagMuonPt)>>fakes_bdt5_histo");
    nonfakes_bdt5->Draw("(TagMuonPt)>>nonfakes_bdt5_histo");
 
-   fakes_bdt5->Draw("(TagMuonPt)>>fakes_bdt5_histo_ptcut",bdt5_WeightExpression);
-   nonfakes_bdt5->Draw("(TagMuonPt)>>nonfakes_bdt5_histo_ptcut",bdt5_WeightExpression);
+   fakes_bdt5->Draw("(TagMuonPt)>>fakes_bdt5_histo_cut",bdt5_WeightExpression);
+   nonfakes_bdt5->Draw("(TagMuonPt)>>nonfakes_bdt5_histo_cut",bdt5_WeightExpression);
    
    fake_events=0;
    fake_events += fakes_bdt5_histo->Integral()*lumi;
@@ -235,8 +235,8 @@ void pt_Eff_Master_BDT_TT( TString myMethodList = "" )
    cout<<"Cutting on BDT5"<<endl;
    cout<<"fake Events (total): "<<fake_events<<endl;
    cout<<"nonfake Events (total): "<<nonfake_events<<endl;
-   cout<<"fake Events (after Pt cut): "<<fakes_bdt5_histo_ptcut->Integral()*lumi<<endl;
-   cout<<"nonfake Events (after Pt cut): "<<nonfakes_bdt5_histo_ptcut->Integral()*lumi<<endl;
+   cout<<"fake Events (after cut): "<<fakes_bdt5_histo_cut->Integral()*lumi<<endl;
+   cout<<"nonfake Events (after cut): "<<nonfakes_bdt5_histo_cut->Integral()*lumi<<endl;
 
    ////////////////////////////
    //    Plots             ////
@@ -247,27 +247,27 @@ void pt_Eff_Master_BDT_TT( TString myMethodList = "" )
 
    
    TGraphAsymmErrors *Pt_ratio_bdt1_fakes = new TGraphAsymmErrors("Pt_ratio_bdt1_fakes","Pt_ratio_bdt1_fakes");
-   Pt_ratio_bdt1_fakes->Divide(fakes_bdt1_histo_ptcut,fakes_bdt1_histo);
+   Pt_ratio_bdt1_fakes->Divide(fakes_bdt1_histo_cut,fakes_bdt1_histo);
    Pt_ratio_bdt1_fakes->SetMarkerStyle(20);
    Pt_ratio_bdt1_fakes->SetMarkerColor(kRed);
 
    TGraphAsymmErrors *Pt_ratio_bdt2_fakes = new TGraphAsymmErrors("Pt_ratio_bdt2_fakes","Pt_ratio_bdt2_fakes");
-   Pt_ratio_bdt2_fakes->Divide(fakes_bdt2_histo_ptcut,fakes_bdt2_histo);
+   Pt_ratio_bdt2_fakes->Divide(fakes_bdt2_histo_cut,fakes_bdt2_histo);
    Pt_ratio_bdt2_fakes->SetMarkerStyle(20);
    Pt_ratio_bdt2_fakes->SetMarkerColor(kBlue);
 
    TGraphAsymmErrors *Pt_ratio_bdt3_fakes = new TGraphAsymmErrors("Pt_ratio_bdt3_fakes","Pt_ratio_bdt3_fakes");
-   Pt_ratio_bdt3_fakes->Divide(fakes_bdt3_histo_ptcut,fakes_bdt3_histo);
+   Pt_ratio_bdt3_fakes->Divide(fakes_bdt3_histo_cut,fakes_bdt3_histo);
    Pt_ratio_bdt3_fakes->SetMarkerStyle(20);
    Pt_ratio_bdt3_fakes->SetMarkerColor(kMagenta-1);
 
    TGraphAsymmErrors *Pt_ratio_bdt4_fakes = new TGraphAsymmErrors("Pt_ratio_bdt4_fakes","Pt_ratio_bdt4_fakes");
-   Pt_ratio_bdt4_fakes->Divide(fakes_bdt4_histo_ptcut,fakes_bdt4_histo);
+   Pt_ratio_bdt4_fakes->Divide(fakes_bdt4_histo_cut,fakes_bdt4_histo);
    Pt_ratio_bdt4_fakes->SetMarkerStyle(20);
    Pt_ratio_bdt4_fakes->SetMarkerColor(kOrange+1);
 
    TGraphAsymmErrors *Pt_ratio_bdt5_fakes = new TGraphAsymmErrors("Pt_ratio_bdt5_fakes","Pt_ratio_bdt5_fakes");
-   Pt_ratio_bdt5_fakes->Divide(fakes_bdt5_histo_ptcut,fakes_bdt5_histo);
+   Pt_ratio_bdt5_fakes->Divide(fakes_bdt5_histo_cut,fakes_bdt5_histo);
    Pt_ratio_bdt5_fakes->SetMarkerStyle(20);
    Pt_ratio_bdt5_fakes->SetMarkerColor(kGreen+3);
 
@@ -303,27 +303,27 @@ void pt_Eff_Master_BDT_TT( TString myMethodList = "" )
    //Pteff_nonfakes->SetLogy();
    
    TGraphAsymmErrors *Pt_ratio_bdt1_nonfakes = new TGraphAsymmErrors("Pt_ratio_bdt1_nonfakes","Pt_ratio_bdt1_nonfakes");
-   Pt_ratio_bdt1_nonfakes->Divide(nonfakes_bdt1_histo_ptcut,nonfakes_bdt1_histo);
+   Pt_ratio_bdt1_nonfakes->Divide(nonfakes_bdt1_histo_cut,nonfakes_bdt1_histo);
    Pt_ratio_bdt1_nonfakes->SetMarkerStyle(20);
    Pt_ratio_bdt1_nonfakes->SetMarkerColor(kRed);
 
    TGraphAsymmErrors *Pt_ratio_bdt2_nonfakes = new TGraphAsymmErrors("Pt_ratio_bdt2_nonfakes","Pt_ratio_bdt2_nonfakes");
-   Pt_ratio_bdt2_nonfakes->Divide(nonfakes_bdt2_histo_ptcut,nonfakes_bdt2_histo);
+   Pt_ratio_bdt2_nonfakes->Divide(nonfakes_bdt2_histo_cut,nonfakes_bdt2_histo);
    Pt_ratio_bdt2_nonfakes->SetMarkerStyle(20);
    Pt_ratio_bdt2_nonfakes->SetMarkerColor(kBlue);
 
    TGraphAsymmErrors *Pt_ratio_bdt3_nonfakes = new TGraphAsymmErrors("Pt_ratio_bdt3_nonfakes","Pt_ratio_bdt3_nonfakes");
-   Pt_ratio_bdt3_nonfakes->Divide(nonfakes_bdt3_histo_ptcut,nonfakes_bdt3_histo);
+   Pt_ratio_bdt3_nonfakes->Divide(nonfakes_bdt3_histo_cut,nonfakes_bdt3_histo);
    Pt_ratio_bdt3_nonfakes->SetMarkerStyle(20);
    Pt_ratio_bdt3_nonfakes->SetMarkerColor(kMagenta-1);
 
    TGraphAsymmErrors *Pt_ratio_bdt4_nonfakes = new TGraphAsymmErrors("Pt_ratio_bdt4_nonfakes","Pt_ratio_bdt4_nonfakes");
-   Pt_ratio_bdt4_nonfakes->Divide(nonfakes_bdt4_histo_ptcut,nonfakes_bdt4_histo);
+   Pt_ratio_bdt4_nonfakes->Divide(nonfakes_bdt4_histo_cut,nonfakes_bdt4_histo);
    Pt_ratio_bdt4_nonfakes->SetMarkerStyle(20);
    Pt_ratio_bdt4_nonfakes->SetMarkerColor(kOrange+1);
 
    TGraphAsymmErrors *Pt_ratio_bdt5_nonfakes = new TGraphAsymmErrors("Pt_ratio_bdt5_nonfakes","Pt_ratio_bdt5_nonfakes");
-   Pt_ratio_bdt5_nonfakes->Divide(nonfakes_bdt5_histo_ptcut,nonfakes_bdt5_histo);
+   Pt_ratio_bdt5_nonfakes->Divide(nonfakes_bdt5_histo_cut,nonfakes_bdt5_histo);
    Pt_ratio_bdt5_nonfakes->SetMarkerStyle(20);
    Pt_ratio_bdt5_nonfakes->SetMarkerColor(kGreen+3);
 
