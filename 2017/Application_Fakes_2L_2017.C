@@ -145,7 +145,7 @@ void Application_Fakes_2L_2017(){
 
 
 
-    TFile *endfile = new TFile("/cms/multilepton-2/mchristos/BDTSkims/2017outFiles/Application_JJJ/QQQ/BDT3_tree.root","RECREATE");   
+    TFile *endfile = new TFile("outFiles/Application_JJJ/QQQ/BDT3_tree.root","RECREATE");   
 
     endfile->cd();
 
