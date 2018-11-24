@@ -1,9 +1,0 @@
-/cvmfs/cms.cern.ch
-/cms/mchristos/ANN/FireMVA/2017
-InputBundle_Data_Input_99_Tree
-
-Processing outFiles/Application_1_4L/InputBundle_Data_Input_99_Tree/Application_Fakes_4L_2017.C...
-                         : Booking "BDTG method" of type "BDT" from /cms/mchristos/ANN/FireMVA/L3Only/dl/weights/fire_MVA_FakeElectrons_BDT.weights.xml.
-                         : Reading weight file: /cms/mchristos/ANN/FireMVA/L3Only/dl/weights/fire_MVA_FakeElectrons_BDT.weights.xml
-<FATAL>                          : Dataset[Default] : You declared 20 variables in the Reader while there are 19 variables declared in the file
-***> abort program execution
