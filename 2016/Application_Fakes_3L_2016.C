@@ -120,8 +120,8 @@ void Application_Fakes_3L_2016(){
 
 
   TFile *input(0);   
-    //input = TFile::Open("/cms/heindl/software/CMSSW_10_4_ROOT614_X_2018-10-19-2300/src/pyPlotter/runPlotter_3LonlyMC_NTupleMaker_2016_v2/QQQ.root");
-    input = TFile::Open("outFiles/Application_JJJ/QQQ/BDT2_tree.root");
+    input = TFile::Open("/cms/heindl/software/CMSSW_10_4_ROOT614_X_2018-10-19-2300/src/pyPlotter/runPlotter_3LonlyMC_NTupleMaker_2016_v2/QQQ.root");
+    //input = TFile::Open("outFiles/Application_JJJ/QQQ/BDT2_tree.root");
     std::cout << "--- TMVAClassificationApp    : Using input file: " << input->GetName() << std::endl;
 
     std::cout << "--- Select sample" << std::endl;
