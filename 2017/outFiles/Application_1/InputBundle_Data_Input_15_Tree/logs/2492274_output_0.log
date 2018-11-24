@@ -1,0 +1,55 @@
+000 (2492274.015.000) 11/08 21:21:59 Job submitted from host: <192.168.1.109:9714>
+...
+001 (2492274.015.000) 11/08 21:22:22 Job executing on host: <192.168.1.49:9578>
+...
+006 (2492274.015.000) 11/08 21:22:31 Image size of job updated: 456688
+	130  -  MemoryUsage of job (MB)
+	132156  -  ResidentSetSize of job (KB)
+...
+006 (2492274.015.000) 11/08 21:27:32 Image size of job updated: 1034524
+	424  -  MemoryUsage of job (MB)
+	433480  -  ResidentSetSize of job (KB)
+...
+006 (2492274.015.000) 11/08 21:32:32 Image size of job updated: 1034524
+	425  -  MemoryUsage of job (MB)
+	434204  -  ResidentSetSize of job (KB)
+...
+006 (2492274.015.000) 11/08 21:37:33 Image size of job updated: 1034524
+	425  -  MemoryUsage of job (MB)
+	434444  -  ResidentSetSize of job (KB)
+...
+006 (2492274.015.000) 11/08 21:42:33 Image size of job updated: 1034524
+	425  -  MemoryUsage of job (MB)
+	434892  -  ResidentSetSize of job (KB)
+...
+006 (2492274.015.000) 11/08 21:47:33 Image size of job updated: 1034524
+	425  -  MemoryUsage of job (MB)
+	435004  -  ResidentSetSize of job (KB)
+...
+006 (2492274.015.000) 11/08 21:52:34 Image size of job updated: 1034524
+	425  -  MemoryUsage of job (MB)
+	435124  -  ResidentSetSize of job (KB)
+...
+006 (2492274.015.000) 11/08 21:57:35 Image size of job updated: 1034524
+	446  -  MemoryUsage of job (MB)
+	456476  -  ResidentSetSize of job (KB)
+...
+006 (2492274.015.000) 11/08 22:02:35 Image size of job updated: 1034524
+	571  -  MemoryUsage of job (MB)
+	584160  -  ResidentSetSize of job (KB)
+...
+005 (2492274.015.000) 11/08 22:06:41 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:09:19, Sys 0 00:00:33  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:09:19, Sys 0 00:00:33  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	0  -  Total Bytes Sent By Job
+	0  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated
+	   Cpus                 :                 1         1
+	   Disk (KB)            :        1        1  28379724
+	   Memory (MB)          :      571        1      4033
+...

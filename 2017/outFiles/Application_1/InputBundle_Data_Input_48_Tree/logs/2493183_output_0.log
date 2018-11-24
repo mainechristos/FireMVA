@@ -1,0 +1,51 @@
+000 (2493183.060.000) 11/09 00:44:14 Job submitted from host: <192.168.1.109:9714>
+...
+001 (2493183.060.000) 11/09 00:44:23 Job executing on host: <192.168.1.47:9634>
+...
+006 (2493183.060.000) 11/09 00:44:32 Image size of job updated: 78716
+	14  -  MemoryUsage of job (MB)
+	14052  -  ResidentSetSize of job (KB)
+...
+006 (2493183.060.000) 11/09 00:49:32 Image size of job updated: 1050600
+	497  -  MemoryUsage of job (MB)
+	508108  -  ResidentSetSize of job (KB)
+...
+006 (2493183.060.000) 11/09 00:54:32 Image size of job updated: 1050600
+	498  -  MemoryUsage of job (MB)
+	508996  -  ResidentSetSize of job (KB)
+...
+006 (2493183.060.000) 11/09 00:59:33 Image size of job updated: 1050600
+	498  -  MemoryUsage of job (MB)
+	509112  -  ResidentSetSize of job (KB)
+...
+006 (2493183.060.000) 11/09 01:04:34 Image size of job updated: 1050600
+	498  -  MemoryUsage of job (MB)
+	509184  -  ResidentSetSize of job (KB)
+...
+006 (2493183.060.000) 11/09 01:09:34 Image size of job updated: 1050600
+	498  -  MemoryUsage of job (MB)
+	509304  -  ResidentSetSize of job (KB)
+...
+006 (2493183.060.000) 11/09 01:14:35 Image size of job updated: 1050600
+	560  -  MemoryUsage of job (MB)
+	573048  -  ResidentSetSize of job (KB)
+...
+006 (2493183.060.000) 11/09 01:19:36 Image size of job updated: 1050600
+	619  -  MemoryUsage of job (MB)
+	633528  -  ResidentSetSize of job (KB)
+...
+005 (2493183.060.000) 11/09 01:21:46 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:08:18, Sys 0 00:00:39  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:08:18, Sys 0 00:00:39  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	0  -  Total Bytes Sent By Job
+	0  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated
+	   Cpus                 :                 1         1
+	   Disk (KB)            :        1        1  28380819
+	   Memory (MB)          :      619        1      4033
+...

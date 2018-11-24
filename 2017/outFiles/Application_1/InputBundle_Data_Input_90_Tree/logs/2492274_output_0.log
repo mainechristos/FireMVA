@@ -1,0 +1,51 @@
+000 (2492274.090.000) 11/08 21:22:00 Job submitted from host: <192.168.1.109:9714>
+...
+001 (2492274.090.000) 11/08 21:22:32 Job executing on host: <192.168.1.68:9996>
+...
+006 (2492274.090.000) 11/08 21:22:40 Image size of job updated: 401184
+	85  -  MemoryUsage of job (MB)
+	86460  -  ResidentSetSize of job (KB)
+...
+006 (2492274.090.000) 11/08 21:27:40 Image size of job updated: 1025452
+	497  -  MemoryUsage of job (MB)
+	508840  -  ResidentSetSize of job (KB)
+...
+006 (2492274.090.000) 11/08 21:32:40 Image size of job updated: 1025452
+	498  -  MemoryUsage of job (MB)
+	509004  -  ResidentSetSize of job (KB)
+...
+006 (2492274.090.000) 11/08 21:37:41 Image size of job updated: 1025452
+	498  -  MemoryUsage of job (MB)
+	509348  -  ResidentSetSize of job (KB)
+...
+006 (2492274.090.000) 11/08 21:42:41 Image size of job updated: 1025452
+	498  -  MemoryUsage of job (MB)
+	509424  -  ResidentSetSize of job (KB)
+...
+006 (2492274.090.000) 11/08 21:47:41 Image size of job updated: 1025452
+	498  -  MemoryUsage of job (MB)
+	509508  -  ResidentSetSize of job (KB)
+...
+006 (2492274.090.000) 11/08 21:52:42 Image size of job updated: 1025452
+	498  -  MemoryUsage of job (MB)
+	509528  -  ResidentSetSize of job (KB)
+...
+006 (2492274.090.000) 11/08 21:57:42 Image size of job updated: 1025452
+	606  -  MemoryUsage of job (MB)
+	620080  -  ResidentSetSize of job (KB)
+...
+005 (2492274.090.000) 11/08 21:57:42 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:14:21, Sys 0 00:00:36  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:14:21, Sys 0 00:00:36  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	0  -  Total Bytes Sent By Job
+	0  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated
+	   Cpus                 :                 1         1
+	   Disk (KB)            :        1        1  20251318
+	   Memory (MB)          :      606        1      4038
+...

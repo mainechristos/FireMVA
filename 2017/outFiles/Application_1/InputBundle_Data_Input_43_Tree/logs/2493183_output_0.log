@@ -1,0 +1,51 @@
+000 (2493183.055.000) 11/09 00:44:14 Job submitted from host: <192.168.1.109:9714>
+...
+001 (2493183.055.000) 11/09 00:44:27 Job executing on host: <192.168.1.46:9845>
+...
+006 (2493183.055.000) 11/09 00:44:35 Image size of job updated: 97664
+	3  -  MemoryUsage of job (MB)
+	2812  -  ResidentSetSize of job (KB)
+...
+006 (2493183.055.000) 11/09 00:49:35 Image size of job updated: 1056152
+	503  -  MemoryUsage of job (MB)
+	514276  -  ResidentSetSize of job (KB)
+...
+006 (2493183.055.000) 11/09 00:54:36 Image size of job updated: 1056152
+	503  -  MemoryUsage of job (MB)
+	514740  -  ResidentSetSize of job (KB)
+...
+006 (2493183.055.000) 11/09 00:59:36 Image size of job updated: 1056152
+	503  -  MemoryUsage of job (MB)
+	514860  -  ResidentSetSize of job (KB)
+...
+006 (2493183.055.000) 11/09 01:04:36 Image size of job updated: 1056152
+	503  -  MemoryUsage of job (MB)
+	514896  -  ResidentSetSize of job (KB)
+...
+006 (2493183.055.000) 11/09 01:09:37 Image size of job updated: 1056152
+	600  -  MemoryUsage of job (MB)
+	613756  -  ResidentSetSize of job (KB)
+...
+006 (2493183.055.000) 11/09 01:14:37 Image size of job updated: 1056152
+	624  -  MemoryUsage of job (MB)
+	638060  -  ResidentSetSize of job (KB)
+...
+006 (2493183.055.000) 11/09 01:19:37 Image size of job updated: 1056152
+	624  -  MemoryUsage of job (MB)
+	638088  -  ResidentSetSize of job (KB)
+...
+005 (2493183.055.000) 11/09 01:22:08 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:09:00, Sys 0 00:00:41  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:09:00, Sys 0 00:00:41  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	0  -  Total Bytes Sent By Job
+	0  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated
+	   Cpus                 :                 1         1
+	   Disk (KB)            :        1        1   2371646
+	   Memory (MB)          :      624        1      4035
+...

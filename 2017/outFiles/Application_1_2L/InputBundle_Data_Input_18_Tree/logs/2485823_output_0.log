@@ -1,0 +1,51 @@
+000 (2485823.030.000) 11/07 23:48:29 Job submitted from host: <192.168.1.109:9714>
+...
+001 (2485823.030.000) 11/07 23:48:37 Job executing on host: <192.168.1.64:9697>
+...
+006 (2485823.030.000) 11/07 23:48:46 Image size of job updated: 72552
+	11  -  MemoryUsage of job (MB)
+	10896  -  ResidentSetSize of job (KB)
+...
+006 (2485823.030.000) 11/07 23:53:47 Image size of job updated: 987296
+	479  -  MemoryUsage of job (MB)
+	490144  -  ResidentSetSize of job (KB)
+...
+006 (2485823.030.000) 11/07 23:58:47 Image size of job updated: 987296
+	480  -  MemoryUsage of job (MB)
+	491040  -  ResidentSetSize of job (KB)
+...
+006 (2485823.030.000) 11/08 00:03:48 Image size of job updated: 987296
+	481  -  MemoryUsage of job (MB)
+	491628  -  ResidentSetSize of job (KB)
+...
+006 (2485823.030.000) 11/08 00:08:49 Image size of job updated: 987296
+	531  -  MemoryUsage of job (MB)
+	542936  -  ResidentSetSize of job (KB)
+...
+006 (2485823.030.000) 11/08 00:13:49 Image size of job updated: 987296
+	640  -  MemoryUsage of job (MB)
+	654564  -  ResidentSetSize of job (KB)
+...
+006 (2485823.030.000) 11/08 00:18:49 Image size of job updated: 987296
+	640  -  MemoryUsage of job (MB)
+	654668  -  ResidentSetSize of job (KB)
+...
+006 (2485823.030.000) 11/08 00:23:50 Image size of job updated: 987296
+	640  -  MemoryUsage of job (MB)
+	654680  -  ResidentSetSize of job (KB)
+...
+005 (2485823.030.000) 11/08 00:25:26 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:17:32, Sys 0 00:00:39  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:17:32, Sys 0 00:00:39  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	0  -  Total Bytes Sent By Job
+	0  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated
+	   Cpus                 :                 1         1
+	   Disk (KB)            :        1        1  19523324
+	   Memory (MB)          :      640        1      4033
+...

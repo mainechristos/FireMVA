@@ -1,0 +1,55 @@
+000 (2485819.006.000) 11/07 22:35:28 Job submitted from host: <192.168.1.109:9714>
+...
+001 (2485819.006.000) 11/07 22:35:35 Job executing on host: <192.168.1.63:9932>
+...
+006 (2485819.006.000) 11/07 22:35:44 Image size of job updated: 346584
+	83  -  MemoryUsage of job (MB)
+	84708  -  ResidentSetSize of job (KB)
+...
+006 (2485819.006.000) 11/07 22:40:45 Image size of job updated: 996840
+	479  -  MemoryUsage of job (MB)
+	489524  -  ResidentSetSize of job (KB)
+...
+006 (2485819.006.000) 11/07 22:45:45 Image size of job updated: 996840
+	479  -  MemoryUsage of job (MB)
+	489556  -  ResidentSetSize of job (KB)
+...
+006 (2485819.006.000) 11/07 22:50:45 Image size of job updated: 996840
+	479  -  MemoryUsage of job (MB)
+	489720  -  ResidentSetSize of job (KB)
+...
+006 (2485819.006.000) 11/07 22:55:46 Image size of job updated: 996840
+	479  -  MemoryUsage of job (MB)
+	489744  -  ResidentSetSize of job (KB)
+...
+006 (2485819.006.000) 11/07 23:00:47 Image size of job updated: 996840
+	479  -  MemoryUsage of job (MB)
+	489764  -  ResidentSetSize of job (KB)
+...
+006 (2485819.006.000) 11/07 23:05:47 Image size of job updated: 996840
+	479  -  MemoryUsage of job (MB)
+	489860  -  ResidentSetSize of job (KB)
+...
+006 (2485819.006.000) 11/07 23:10:48 Image size of job updated: 996840
+	480  -  MemoryUsage of job (MB)
+	491040  -  ResidentSetSize of job (KB)
+...
+006 (2485819.006.000) 11/07 23:15:49 Image size of job updated: 996840
+	660  -  MemoryUsage of job (MB)
+	675284  -  ResidentSetSize of job (KB)
+...
+005 (2485819.006.000) 11/07 23:23:54 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:44:12, Sys 0 00:02:09  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:44:12, Sys 0 00:02:09  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	0  -  Total Bytes Sent By Job
+	0  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated
+	   Cpus                 :                 1         1
+	   Disk (KB)            :        1        1  19560165
+	   Memory (MB)          :      660        1      4033
+...

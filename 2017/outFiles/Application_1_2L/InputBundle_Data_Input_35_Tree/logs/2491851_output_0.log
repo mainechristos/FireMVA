@@ -1,0 +1,51 @@
+000 (2491851.047.000) 11/08 20:36:47 Job submitted from host: <192.168.1.109:9714>
+...
+001 (2491851.047.000) 11/08 20:37:14 Job executing on host: <192.168.1.64:9697>
+...
+006 (2491851.047.000) 11/08 20:37:23 Image size of job updated: 438476
+	73  -  MemoryUsage of job (MB)
+	73824  -  ResidentSetSize of job (KB)
+...
+006 (2491851.047.000) 11/08 20:42:23 Image size of job updated: 1018380
+	424  -  MemoryUsage of job (MB)
+	433644  -  ResidentSetSize of job (KB)
+...
+006 (2491851.047.000) 11/08 20:47:23 Image size of job updated: 1018380
+	425  -  MemoryUsage of job (MB)
+	435080  -  ResidentSetSize of job (KB)
+...
+006 (2491851.047.000) 11/08 20:52:25 Image size of job updated: 1018380
+	427  -  MemoryUsage of job (MB)
+	437024  -  ResidentSetSize of job (KB)
+...
+006 (2491851.047.000) 11/08 20:57:25 Image size of job updated: 1018380
+	428  -  MemoryUsage of job (MB)
+	437472  -  ResidentSetSize of job (KB)
+...
+006 (2491851.047.000) 11/08 21:02:25 Image size of job updated: 1018380
+	428  -  MemoryUsage of job (MB)
+	437672  -  ResidentSetSize of job (KB)
+...
+006 (2491851.047.000) 11/08 21:07:26 Image size of job updated: 1018380
+	429  -  MemoryUsage of job (MB)
+	438468  -  ResidentSetSize of job (KB)
+...
+006 (2491851.047.000) 11/08 21:12:27 Image size of job updated: 1018380
+	532  -  MemoryUsage of job (MB)
+	544092  -  ResidentSetSize of job (KB)
+...
+005 (2491851.047.000) 11/08 21:15:20 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:18:39, Sys 0 00:00:47  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:18:39, Sys 0 00:00:47  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	0  -  Total Bytes Sent By Job
+	0  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated
+	   Cpus                 :                 1         1
+	   Disk (KB)            :        1        1  19563717
+	   Memory (MB)          :      532        1      4033
+...

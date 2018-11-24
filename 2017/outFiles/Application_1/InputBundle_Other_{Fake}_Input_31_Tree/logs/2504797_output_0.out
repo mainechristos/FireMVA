@@ -1,0 +1,34 @@
+/cvmfs/cms.cern.ch
+/cms/mchristos/ANN/FireMVA/2017
+InputBundle_Other_{Fake}_Input_31_Tree
+
+Processing outFiles/Application_1/InputBundle_Other_{Fake}_Input_31_Tree/Application_Fakes_3L_2017.C...
+                         : Booking "BDTG method" of type "BDT" from /cms/mchristos/ANN/FireMVA/2017/dl/weights/fire_MVA_TT_IDvarsElectrons_BDT.weights.xml.
+                         : Reading weight file: /cms/mchristos/ANN/FireMVA/2017/dl/weights/fire_MVA_TT_IDvarsElectrons_BDT.weights.xml
+<HEADER> DataSetInfo              : [Default] : Added class "Background"
+<HEADER> DataSetInfo              : [Default] : Added class "Signal"
+                         : Booked classifier "BDT" of type: "BDT"
+                         : Booking "BDTG method" of type "BDT" from /cms/mchristos/ANN/FireMVA/2017/dl/weights/fire_MVA_TT_IDvarsMuons_BDT.weights.xml.
+                         : Reading weight file: /cms/mchristos/ANN/FireMVA/2017/dl/weights/fire_MVA_TT_IDvarsMuons_BDT.weights.xml
+<HEADER> DataSetInfo              : [Default] : Added class "Background"
+<HEADER> DataSetInfo              : [Default] : Added class "Signal"
+                         : Booked classifier "BDT" of type: "BDT"
+--- TMVAClassificationApp    : Using input file: outFiles/Application_1/InputBundle_Other_{Fake}_Input_31_Tree/BDT2_tree.root
+--- Select sample
+--- Processing: 14975 events
+--- ... Processing event: 0
+--- ... Processing event: 1000
+--- ... Processing event: 2000
+--- ... Processing event: 3000
+--- ... Processing event: 4000
+--- ... Processing event: 5000
+--- ... Processing event: 6000
+--- ... Processing event: 7000
+--- ... Processing event: 8000
+--- ... Processing event: 9000
+--- ... Processing event: 10000
+--- ... Processing event: 11000
+--- ... Processing event: 12000
+--- ... Processing event: 13000
+--- ... Processing event: 14000
+--- End of event loop: Real time 0:00:22, CP time 17.130

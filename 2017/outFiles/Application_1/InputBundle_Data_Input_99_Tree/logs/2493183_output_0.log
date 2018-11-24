@@ -1,0 +1,51 @@
+000 (2493183.111.000) 11/09 00:44:15 Job submitted from host: <192.168.1.109:9714>
+...
+001 (2493183.111.000) 11/09 00:44:27 Job executing on host: <192.168.1.51:9694>
+...
+006 (2493183.111.000) 11/09 00:44:35 Image size of job updated: 443772
+	123  -  MemoryUsage of job (MB)
+	125220  -  ResidentSetSize of job (KB)
+...
+006 (2493183.111.000) 11/09 00:49:35 Image size of job updated: 1040996
+	490  -  MemoryUsage of job (MB)
+	501676  -  ResidentSetSize of job (KB)
+...
+006 (2493183.111.000) 11/09 00:54:36 Image size of job updated: 1040996
+	491  -  MemoryUsage of job (MB)
+	502732  -  ResidentSetSize of job (KB)
+...
+006 (2493183.111.000) 11/09 00:59:36 Image size of job updated: 1040996
+	491  -  MemoryUsage of job (MB)
+	502760  -  ResidentSetSize of job (KB)
+...
+006 (2493183.111.000) 11/09 01:04:36 Image size of job updated: 1040996
+	492  -  MemoryUsage of job (MB)
+	502880  -  ResidentSetSize of job (KB)
+...
+006 (2493183.111.000) 11/09 01:09:38 Image size of job updated: 1040996
+	492  -  MemoryUsage of job (MB)
+	502936  -  ResidentSetSize of job (KB)
+...
+006 (2493183.111.000) 11/09 01:14:38 Image size of job updated: 1040996
+	492  -  MemoryUsage of job (MB)
+	502988  -  ResidentSetSize of job (KB)
+...
+006 (2493183.111.000) 11/09 01:19:38 Image size of job updated: 1040996
+	509  -  MemoryUsage of job (MB)
+	520392  -  ResidentSetSize of job (KB)
+...
+005 (2493183.111.000) 11/09 01:22:49 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:07:18, Sys 0 00:00:25  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:07:18, Sys 0 00:00:25  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	0  -  Total Bytes Sent By Job
+	0  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated
+	   Cpus                 :                 1         1
+	   Disk (KB)            :        1        1  28379832
+	   Memory (MB)          :      509        1      4033
+...

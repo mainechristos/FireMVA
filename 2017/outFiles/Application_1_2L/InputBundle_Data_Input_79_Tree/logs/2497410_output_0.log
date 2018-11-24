@@ -1,0 +1,51 @@
+000 (2497410.091.000) 11/09 15:33:47 Job submitted from host: <192.168.1.109:9714>
+...
+001 (2497410.091.000) 11/09 15:34:12 Job executing on host: <192.168.1.42:9515>
+...
+006 (2497410.091.000) 11/09 15:34:21 Image size of job updated: 327176
+	25  -  MemoryUsage of job (MB)
+	25112  -  ResidentSetSize of job (KB)
+...
+006 (2497410.091.000) 11/09 15:39:22 Image size of job updated: 1058684
+	504  -  MemoryUsage of job (MB)
+	516080  -  ResidentSetSize of job (KB)
+...
+006 (2497410.091.000) 11/09 15:44:22 Image size of job updated: 1058684
+	505  -  MemoryUsage of job (MB)
+	516500  -  ResidentSetSize of job (KB)
+...
+006 (2497410.091.000) 11/09 15:49:23 Image size of job updated: 1058684
+	505  -  MemoryUsage of job (MB)
+	516664  -  ResidentSetSize of job (KB)
+...
+006 (2497410.091.000) 11/09 15:54:24 Image size of job updated: 1058684
+	505  -  MemoryUsage of job (MB)
+	516684  -  ResidentSetSize of job (KB)
+...
+006 (2497410.091.000) 11/09 15:59:24 Image size of job updated: 1058684
+	505  -  MemoryUsage of job (MB)
+	516696  -  ResidentSetSize of job (KB)
+...
+006 (2497410.091.000) 11/09 16:04:24 Image size of job updated: 1058684
+	505  -  MemoryUsage of job (MB)
+	516700  -  ResidentSetSize of job (KB)
+...
+006 (2497410.091.000) 11/09 16:09:25 Image size of job updated: 1058684
+	505  -  MemoryUsage of job (MB)
+	516712  -  ResidentSetSize of job (KB)
+...
+005 (2497410.091.000) 11/09 16:23:20 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:03:54, Sys 0 00:00:15  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:03:54, Sys 0 00:00:15  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	0  -  Total Bytes Sent By Job
+	0  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated
+	   Cpus                 :                 1         1
+	   Disk (KB)            :        1        1   2371274
+	   Memory (MB)          :      505        1      4035
+...
