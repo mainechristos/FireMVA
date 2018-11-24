@@ -97,8 +97,8 @@ void Application_Fakes_4L_2017(){
 
 
   TFile *input(0);   
-    //input = TFile::Open(" /cms/heindl/software/CMSSW_10_4_ROOT614_X_2018-10-19-2300/src/pyPlotter16and17_No2/pyPlotter/runPlotter_4L_NTupleMaker_2017/QQQ.root");
-    input = TFile::Open("outFiles/Application_JJJ/QQQ/BDT2_tree.root");
+    input = TFile::Open(" /cms/heindl/software/CMSSW_10_4_ROOT614_X_2018-10-19-2300/src/pyPlotter16and17_No2/pyPlotter/runPlotter_4L_NTupleMaker_2017/QQQ.root");
+    //input = TFile::Open("outFiles/Application_JJJ/QQQ/BDT2_tree.root");
     std::cout << "--- TMVAClassificationApp    : Using input file: " << input->GetName() << std::endl;
 
     std::cout << "--- Select sample" << std::endl;
