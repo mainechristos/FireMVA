@@ -15,5 +15,4 @@ mkdir outFiles/Application_$1/$2
 cp Application_Fakes_2L_2017.C outFiles/Application_$1/$2/Application_Fakes_2L_2017.C
 sed -i "s/QQQ/$2/g;" outFiles/Application_$1/$2/Application_Fakes_2L_2017.C
 sed -i "s/JJJ/$1/g;" outFiles/Application_$1/$2/Application_Fakes_2L_2017.C
-sed -i "s/UUU/$3/g;" outFiles/Application_$1/$2/Application_Fakes_2L_2017.C
 root -l -q outFiles/Application_$1/$2/Application_Fakes_2L_2017.C
